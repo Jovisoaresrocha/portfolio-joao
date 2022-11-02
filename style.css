@@ -112,7 +112,20 @@ li a {
   margin: -3px auto;
 }
 
+.bau img {
+  display: block;
+  width: 100%;
+}
+
 .chao img {
   height: 100px;
 }
 
+.qualquer {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+}
+.chao {
+  margin: 0 auto;
+}
