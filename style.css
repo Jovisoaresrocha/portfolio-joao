@@ -109,64 +109,10 @@ li a {
   height: 90vh;
   gap: 100px;
   align-items: flex-end;
-  margin: -3px;
-  justify-content: center;
-  position: relative;
+  margin: -3px auto;
 }
 
 .chao img {
   height: 100px;
 }
 
-.bau1:hover::after {
-  content: " ";
-  background-image: url(/img/Sprite-0001.gif);
-  height: 150px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 380px;
-  top: 500px;
-}
-
-.bau2:hover::after {
-  content: " ";
-  background-image: url(/img/Sprite-0001.gif);
-  height: 150px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 790px;
-  top: 500px;
-}
-.bau3:hover::after {
-  content: " ";
-  background-image: url(/img/Sprite-0001.gif);
-  height: 150px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 1200px;
-  top: 500px;
-}
-.bau4:hover::after {
-  content: " ";
-  background-image: url(/img/Sprite-0001.gif);
-  height: 150px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 1610px;
-  top: 500px;
-}
-
-.bau5:hover::after {
-  content: " ";
-  background-image: url(/img/Sprite-0001.gif);
-  height: 150px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 2020px;
-  top: 500px;
-}
