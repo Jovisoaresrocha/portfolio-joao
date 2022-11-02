@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Pixel-Art";
+  src: url("../fonte/fonte.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Pixel-Art";
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  color: #3a181a;
+}
+
+body {
+  background-image: url(./img/background.png);
+  background-repeat: repeat-x;
+  background-color: #d1d2e6;
+  overflow-y: hidden;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cima {
+  position: fixed;
+  z-index: 3;
+}
+.perfil {
+  margin-top: 45px;
+  background-image: url(./img/borda-menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 18.75rem;
+  width: 30rem;
+  justify-content: center;
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 20ch;
+}
+
+figure {
+  padding-bottom: 90px;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+p {
+  color: white;
+  font-size: 0.9rem;
+}
+
+li {
+  color: #3a181a;
+}
+
+.caixinhas {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.caixinhas img {
+  max-width: 50px;
+}
+
+nav {
+  margin-right: 25px;
+}
+ul {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+li a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* ----------------------------------- */
+
+.baixo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.baus {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  gap: 100px;
+  align-items: flex-end;
+  margin: -3px;
+  justify-content: center;
+  position: relative;
+}
+
+.chao img {
+  height: 100px;
+}
+
+.bau1:hover::after {
+  content: " ";
+  background-image: url(/img/Sprite-0001.gif);
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 380px;
+  top: 500px;
+}
+
+.bau2:hover::after {
+  content: " ";
+  background-image: url(/img/Sprite-0001.gif);
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 790px;
+  top: 500px;
+}
+.bau3:hover::after {
+  content: " ";
+  background-image: url(/img/Sprite-0001.gif);
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 1200px;
+  top: 500px;
+}
+.bau4:hover::after {
+  content: " ";
+  background-image: url(/img/Sprite-0001.gif);
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 1610px;
+  top: 500px;
+}
+
+.bau5:hover::after {
+  content: " ";
+  background-image: url(/img/Sprite-0001.gif);
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 2020px;
+  top: 500px;
+}
