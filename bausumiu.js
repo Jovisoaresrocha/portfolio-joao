@@ -38,4 +38,6 @@ bauAparecer5.addEventListener("click", function () {
   var bau = document.querySelector(".bau5-b");
   bau.classList.toggle("hide");
 });
-t
+
+
+clearInterval(bauAparecer, 1);
