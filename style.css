@@ -129,3 +129,8 @@ li a {
 .chao {
   margin: 0 auto;
 }
+
+
+.bau1 img:active{
+ display: none;
+}
