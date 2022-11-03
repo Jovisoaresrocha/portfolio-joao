@@ -130,7 +130,7 @@ li a {
   margin: 0 auto;
 }
 
-
-.bau1 img:active{
- display: none;
+.hide {
+  display: none;
 }
+
