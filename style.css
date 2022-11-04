@@ -160,17 +160,17 @@ li a {
   position: relative;
   overflow: hidden;
   align-items: flex-end;
-  padding-bottom: 70px;
+  padding-bottom: 61px;
   padding-left: 30px;
   /* overflow-x: auto; FICA COM UM SCROLL EM BAIXO DOS BAUS */
 }
 
-.baus::after {
+.bau3::after {
   content: "";
   display: block;
   height: 70px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   background-image: url(./img/blocos/blocomeio-copiar.png);
@@ -235,7 +235,7 @@ li a {
 
   .baus {
     gap: 60px;
-    padding-bottom: 68px;
+    padding-bottom: 100px;
     overflow-x: scroll;
   }
 }
