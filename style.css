@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* ; */
+
 * {
   font-family: "Pixel-Art";
   list-style: none;
@@ -12,24 +12,26 @@
   padding: 0px;
   text-decoration: none;
   color: #3a181a;
+  box-sizing: border-box;
 }
 
 body {
+  overflow-y: hidden;
   background-image: url(./img/background.png);
   background-repeat: repeat-x;
   background-color: #d1d2e6;
-  overflow-y: hidden;
+  height: 100vh;
 }
 
-.background {
+.cima {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.cima {
+.conteudo {
   position: fixed;
-  z-index: 3;
+  z-index: 9999;
 }
 .perfil {
   margin-top: 45px;
@@ -90,7 +92,7 @@ li {
 nav {
   margin-right: 25px;
 }
-ul {
+ul.links {
   margin-top: 20px;
   display: flex;
   gap: 40px;
@@ -103,11 +105,13 @@ li a {
   align-items: center;
 }
 
-.gitHub,.linkedin {
+.gitHub,
+.linkedin {
   position: relative;
 }
 
-.gitHub::after,.linkedin::after {
+.gitHub::after,
+.linkedin::after {
   content: "";
   display: block;
   height: 3px;
@@ -119,50 +123,113 @@ li a {
   transition: 0.3s;
 }
 
-.gitHub:hover::after,.linkedin:hover::after {
+.gitHub:hover::after,
+.linkedin:hover::after {
   width: 100%;
 }
-
-
-
-
 
 /* ----------------------------------- */
 
 .baixo {
-  position: relative;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  width: 100%;
+  z-index: 3;
+  position: relative;
+}
+
+.bau img {
+  min-width: 50%;
+}
+.hide {
+  display: none;
+}
+
+.qualquer {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .baus {
   display: flex;
-  width: 100vw;
-  height: 90vh;
   gap: 100px;
-  align-items: flex-end;
-  margin: -3px auto;
-}
-
-.bau img {
-  display: block;
   width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-end;
+  padding-bottom: 69px;
+  padding-left: 30px;
+  /* overflow-x: auto; FICA COM UM SCROLL EM BAIXO DOS BAUS */
 }
 
-.chao img {
-  height: 100px;
+.baus::after {
+  content: "";
+  display: block;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-image: url(./img/blocos/blocomeio-copiar.png);
+  background-size: 110px;
+  background-repeat: repeat-x;
+  transition: 0.3s;
 }
 
-.qualquer {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-}
-.chao {
-  margin: 0 auto;
-}
+@media (max-width: 500px) {
+  .perfil {
+    margin-top: 20px;
+    height: 14.75rem;
+    width: 22rem;
+  }
 
-.hide {
-  display: none;
+  figure img {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+
+  .descricao h1 {
+    font-size: 1.1rem;
+  }
+
+  .descricao {
+    width: 150px;
+    margin-top: 30px;
+  }
+  .descricao p {
+    font-size: 0.8rem;
+    width: 20ch;
+  }
+
+  .caixinhas {
+    padding-bottom: 24px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .caixinhas img {
+    max-width: 40px;
+  }
+
+  ul {
+    width: 100%;
+  }
+  ul.links {
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  .baus img {
+    width: 250px;
+  }
+
+  .baus {
+    gap: 60px;
+    padding-bottom: 68px;
 }

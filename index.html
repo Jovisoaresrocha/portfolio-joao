@@ -8,11 +8,14 @@
   <title> Portfolio - João </title>
   <link rel="stylesheet" href="./style.css">
   <script src="./bausumiu.js" defer></script>
+  <script src="./scroll.js" defer></script>
 </head>
 
 <body>
-  <div class="background">
-    <header class="cima" aria-label="principal">
+
+  <!-- parte com position fixed (menu) -->
+  <div class="cima">
+    <header class="conteudo" aria-label="principal">
       <div class="perfil">
         <figure><img src="./img/eu.png" alt="foto do joão vitor"></figure>
         <div class="descricao">
@@ -27,7 +30,7 @@
         </div>
       </div>
       <nav>
-        <ul>
+        <ul class="links">
           <li>
             <a href="https://github.com/JoViSoRo" target="_blank">
               <img src="./img/github.png"> <span class="gitHub">GitHub</span>
@@ -43,6 +46,8 @@
     </header>
   </div>
 
+
+  <!-- parte dos baus  -->
   <main class="baixo">
     <div class="qualquer">
       <ul class="baus">
@@ -57,20 +62,21 @@
 
         <!-- prototipo -->
         <li class="bau3"> <img src="./img/baus/prototipo/bau-prototipo-fechado.png" onmouseover="this.src='./img/baus/prototipo/bau-protitpo-fechado.gif'" onmouseout="this.src='./img/baus/prototipo/bau-prototipo-fechado.png'" alt=""></li>
-        <li class="bau3-b hide"> <a href="https://jovisoro.github.io/Portfolio-pessoal/" target="_blank"> <img src="./img/baus/prototipo/bau-protitpo.gif" alt=""> </a> </li>
+        <li class="bau3-b hide "> <a href="https://jovisoro.github.io/Portfolio-pessoal/" target="_blank"> <img src="./img/baus/prototipo/bau-protitpo.gif" alt=""> </a> </li>
 
         <!-- trancado -->
         <li class="bau4"> <img src="./img/baus/trancado/TRANCADO.png" onmouseover="this.src='./img/baus/trancado/bau-trancado.gif'" onmouseout="this.src='./img/baus/trancado/TRANCADO.png'" alt=""></li>
-      </ul>
 
-      <div class="chao"> <img src="./img/blocos/bloco grande 4000px.png" alt=""></div>
+        <li class="bau4"> <img src="./img/baus/trancado/TRANCADO.png" onmouseover="this.src='./img/baus/trancado/bau-trancado.gif'" onmouseout="this.src='./img/baus/trancado/TRANCADO.png'" alt=""></li>
+
+        <li class="bau4"> <img src="./img/baus/trancado/TRANCADO.png" onmouseover="this.src='./img/baus/trancado/bau-trancado.gif'" onmouseout="this.src='./img/baus/trancado/TRANCADO.png'" alt=""></li>
+
+
+      </ul>
     </div>
 
 
   </main>
-
-
-  </div>
 
 </body>
 
