@@ -177,9 +177,13 @@ li a {
   background-size: 110px;
   background-repeat: repeat-x;
   transition: 0.3s;
+  z-index: -2; /* alteração */
 }
 
 @media (max-width: 500px) {
+  body {
+    overflow-: scroll;
+  }
   .perfil {
     margin-top: 20px;
     height: 14.75rem;
@@ -232,4 +236,6 @@ li a {
   .baus {
     gap: 60px;
     padding-bottom: 68px;
+    overflow-x: scroll;
+  }
 }
