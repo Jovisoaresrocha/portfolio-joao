@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Pixel-Art";
-  src: url("../fonte/fonte.ttf") format("truetype");
+  src: url("./fonte/fonte.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
