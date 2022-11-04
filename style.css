@@ -160,7 +160,7 @@ li a {
   position: relative;
   overflow: hidden;
   align-items: flex-end;
-  padding-bottom: 69px;
+  padding-bottom: 70px;
   padding-left: 30px;
   /* overflow-x: auto; FICA COM UM SCROLL EM BAIXO DOS BAUS */
 }
@@ -170,7 +170,7 @@ li a {
   display: block;
   height: 70px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   background-image: url(./img/blocos/blocomeio-copiar.png);
