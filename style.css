@@ -165,7 +165,7 @@ li a {
   /* overflow-x: auto; FICA COM UM SCROLL EM BAIXO DOS BAUS */
 }
 
-.bau3::after {
+.baus::after {
   content: "";
   display: block;
   height: 70px;
