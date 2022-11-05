@@ -20,7 +20,7 @@ body {
   background-image: url(./img/background.png);
   background-repeat: repeat-x;
   background-color: #d1d2e6;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .cima {
