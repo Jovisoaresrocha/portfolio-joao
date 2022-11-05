@@ -182,7 +182,7 @@ li a {
 
 @media (max-width: 500px) {
   body {
-    overflow: scroll;
+    overflow: hidden;
   }
   .perfil {
     margin-top: 20px;
