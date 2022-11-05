@@ -20,7 +20,7 @@ body {
   background-image: url(./img/background.png);
   background-repeat: repeat-x;
   background-color: #d1d2e6;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .cima {
@@ -131,7 +131,7 @@ li a {
 /* ----------------------------------- */
 
 .baixo {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   align-items: flex-end;
   width: 100%;
