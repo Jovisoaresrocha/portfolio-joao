@@ -236,5 +236,7 @@ li a {
 
   .baus {
     gap: 60px;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 }
