@@ -10,6 +10,11 @@
   z-index: 99;
   pointer-events: none;
 }
+#musica {
+  position: fixed;
+  z-index: -999;
+}
+
 * {
   font-family: "Pixel-Art";
   list-style: none;
@@ -39,7 +44,7 @@ body {
 }
 .perfil {
   margin-top: 45px;
-  background-image: url(./img/borda-menu.png);
+  background-image: url(./img/borda-menu.gif);
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;

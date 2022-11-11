@@ -28,17 +28,18 @@ let flip = false;
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  const scale = 0.2;
+  const scale = 0.4;
   const width = avatar.width * scale;
   const height = avatar.height * scale;
   const offset = 70 * scale;
   if (!playerReady) {
     playerReady = true;
-    playerX = -60;
+    playerX = -200;
     playerY = 100;
   }
 
-  const floorY = canvas.height - 60 - height + offset;
+  // chão:
+  const floorY = canvas.height - 68 - height + offset;
   if (playerY > floorY) {
     // playerVelY = 0;
     playerY = floorY;
@@ -48,11 +49,13 @@ function draw() {
     canJump = false;
   }
 
-  const WallL = canvas.width -40;
+  // parede da esquerda
+  const WallL = canvas.width - 100;
   if (playerX > WallL) {
     playerX = WallL;
   }
-  const WallR = -60;
+  // parede da direita
+  let WallR = -200;
   {
     if (playerX < WallR) playerX = WallR;
   }
@@ -69,12 +72,18 @@ function draw() {
 }
 
 let keysdown = {};
-
+let tempo = 0
 const playerSpeed = 2;
 function animate() {
   if (keysdown.ARROWRIGHT || keysdown["D"]) {
     playerVelX += playerSpeed;
+    if (tempo === 0) {
+      audio.volume = 0.07;
+      audio.play();
+      tempo += 1
+    }
     flip = false;
+    WallF = 0;
   }
   if (keysdown.ARROWLEFT || keysdown["A"]) {
     playerVelX -= playerSpeed;
