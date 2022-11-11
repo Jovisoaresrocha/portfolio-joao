@@ -5,9 +5,9 @@
   font-style: normal;
 }
 
-#gamefofinho{
+#gamefofinho {
   position: fixed;
-  z-index: 99999;
+  z-index: 99;
   pointer-events: none;
 }
 * {
@@ -165,7 +165,8 @@ li a {
   height: 100%;
   overflow: hidden;
   align-items: flex-end;
-  padding-left: 20px;
+  padding-left: 120px;
+
   /* overflow-x: auto; FICA COM UM SCROLL EM BAIXO DOS BAUS */
 }
 
@@ -179,7 +180,15 @@ li a {
   background-repeat: repeat-x;
 }
 
+@media (max-width: 700px) {
+  .baus {
+    padding-left: 60px;
+  }
+}
 @media (max-width: 500px) {
+  #gamefofinho {
+    display: none;
+  }
 
   body {
     overflow-x: scroll;
@@ -236,6 +245,7 @@ li a {
   .baus {
     gap: 60px;
     overflow-x: scroll;
+    padding-left: 20px;
   }
 
   .chao {

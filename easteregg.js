@@ -14,7 +14,7 @@ avatar.src = "./img/avatar/avatar.png";
 window.addEventListener("resize", onResize);
 
 avatar.addEventListener("load", function () {
-  console.log("oi");
+  console.log("oi, veio procurar o easteregg né? 😳");
   draw();
 });
 
@@ -24,6 +24,7 @@ let playerVelX = 0;
 let playerVelY = 0;
 let playerReady = false;
 let canJump = false;
+let flip = false;
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -33,34 +34,51 @@ function draw() {
   const offset = 70 * scale;
   if (!playerReady) {
     playerReady = true;
-    playerX = -40;
+    playerX = -60;
     playerY = 100;
   }
+
   const floorY = canvas.height - 60 - height + offset;
-  if (playerY > floorY ) {
-    playerVelY = 0;
+  if (playerY > floorY) {
+    // playerVelY = 0;
     playerY = floorY;
     canJump = true;
+    playerVelY *= -0.1;
   } else {
     canJump = false;
   }
-  ctx.drawImage(avatar, playerX, playerY, width, height);
+
+  const WallL = canvas.width -40;
+  if (playerX > WallL) {
+    playerX = WallL;
+  }
+  const WallR = -60;
+  {
+    if (playerX < WallR) playerX = WallR;
+  }
+
+  ctx.save();
+  ctx.translate(playerX, playerY);
+  if (flip) {
+    ctx.scale(-1, 1);
+    ctx.translate(-width, 0);
+  }
+
+  ctx.drawImage(avatar, 0, 0, width, height);
+  ctx.restore();
 }
 
 let keysdown = {};
-let targetX = -50;
 
 const playerSpeed = 2;
 function animate() {
-  const distance = Math.abs(targetX - playerX);
-  if (distance < 10) {
-    targetX = playerX;
-  }
-  if (keysdown.ARROWRIGHT || keysdown["D"] || playerX < targetX) {
+  if (keysdown.ARROWRIGHT || keysdown["D"]) {
     playerVelX += playerSpeed;
+    flip = false;
   }
-  if (keysdown.ARROWLEFT || keysdown["A"] || playerX > targetX) {
+  if (keysdown.ARROWLEFT || keysdown["A"]) {
     playerVelX -= playerSpeed;
+    flip = true;
   }
   if ((keysdown.ARROWUP || keysdown["W"] || keysdown[" "]) && canJump) {
     playerVelY = -20;
@@ -83,11 +101,6 @@ document.addEventListener("keydown", function (e) {
 document.addEventListener("keyup", function (e) {
   delete keysdown[e.key.toUpperCase()];
 });
-
-// document.addEventListener("mousemove", function (e) {
-//   console.log(e.clientX);
-//   targetX = e.clientX - 60;
-// });
 
 onResize();
 animate();
