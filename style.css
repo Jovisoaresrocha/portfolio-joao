@@ -5,6 +5,11 @@
   font-style: normal;
 }
 
+#gamefofinho{
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+}
 * {
   font-family: "Pixel-Art";
   list-style: none;
@@ -101,9 +106,8 @@ ul.links {
 li a {
   display: flex;
   gap: 5px;
-  align-items: center;  
+  align-items: center;
   color: #3a181a;
-
 }
 
 .gitHub,
@@ -176,6 +180,7 @@ li a {
 }
 
 @media (max-width: 500px) {
+
   body {
     overflow-x: scroll;
   }
@@ -235,4 +240,5 @@ li a {
 
   .chao {
     height: 111px;
+  }
 }
