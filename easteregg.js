@@ -1,6 +1,8 @@
 const canvas = document.querySelector("#gamefofinho");
 const ctx = canvas.getContext("2d");
 console.log(canvas);
+const button = document.querySelector("#musica");
+const audio = document.querySelector("audio");
 
 // Isso faz o tamano do canvas (o gamefofinho) ficar do tamanho da tela quando o usuario entra no site
 function onResize() {
@@ -72,7 +74,7 @@ function draw() {
 }
 
 let keysdown = {};
-let tempo = 0
+let tempo = 0;
 const playerSpeed = 2;
 function animate() {
   if (keysdown.ARROWRIGHT || keysdown["D"]) {
@@ -80,7 +82,7 @@ function animate() {
     if (tempo === 0) {
       audio.volume = 0.07;
       audio.play();
-      tempo += 1
+      tempo += 1;
     }
     flip = false;
     WallF = 0;
