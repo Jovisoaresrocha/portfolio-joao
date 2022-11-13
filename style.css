@@ -257,3 +257,51 @@ li a {
     height: 111px;
   }
 }
+
+@media (max-height: 800px) {
+  .perfil {
+    margin-top: 20px;
+    height: 14.75rem;
+    width: 22rem;
+  }
+
+  figure img {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .descricao h1 {
+    font-size: 1.1rem;
+  }
+  .descricao {
+    width: 150px;
+    margin-top: 30px;
+  }
+  .descricao p {
+    font-size: 0.8rem;
+    width: 20ch;
+  }
+  .caixinhas {
+    padding-bottom: 24px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .caixinhas img {
+    max-width: 40px;
+  }
+  ul.links {
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+  }
+
+  .baus img {
+    width: 250px;
+  }
+  .baus {
+    gap: 60px;
+    padding-left: 20px;
+  }
+}
