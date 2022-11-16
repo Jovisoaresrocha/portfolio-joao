@@ -160,7 +160,8 @@ li a {
 .qualquer {
   width: 100%;
   height: 100%;
-  margin-bottom: -2px;
+  margin: 0px auto -5px auto ;
+  z-index: 999;
 }
 
 .baus {
